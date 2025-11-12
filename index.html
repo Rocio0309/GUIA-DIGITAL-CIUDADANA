@@ -1,195 +1,95 @@
-<html>
-<script src="CHIO.JS"></script>
+<!doctype html>
 <html lang="es">
-<head> 
- <meta charset="UTF-8">
- <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <title>Menú con Submenú</title>
- <!-- Fuente Raleway -->
- <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap" rel="stylesheet">
- <style>
-   body {
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Página Ciudadano Básica</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
       margin: 0;
-      font-family: 'Raleway', Arial, sans-serif;
-      background: #f9f9f9;
-      overflow-x: hidden;
-   }
-
-   /* ---- ESTILO DEL MENU PRINCIPAL ---- */
-   nav {
-      background: #E74C3E50;
-      position: relative;
-      padding-left: 60px;
-      height: 70px;
-      display: flex;
-      align-items: center;
-      z-index: 10;
-   }
-
-   /* Imagen del logo */
-   nav img.logo {
-      position: absolute;
-      top: 15px;
-      left: 10px;
-      width: 40px;
-      height: auto;
-   }
-
-   nav ul {
-       list-style: none;
-       margin: 0;
-       padding: 0;
-       display: flex;
-       gap: 10px;
-       align-items: center;
-   }
-
-   nav ul li {
-       position: relative;
-       text-align: center;
-   }
-
-   nav ul li a {
-       display: block;
-       padding: 12px 22px;
-       color: white;
-       text-decoration: none;
-       font-weight: 600;
-       background: #B19CD9;
-       border-radius: 25px;
-       box-shadow: 0px 4px 6px rgba(0,0,0,0.2);
-       transition: all 0.3s ease;
-   }
-
-   nav ul li a:hover {
-       background: #D8BFD8;
-       transform: translateY(-2px);
-       box-shadow: 0px 6px 10px rgba(0,0,0,0.25);
-   }
-
-   nav ul li ul {
-       display: none;
-       position: absolute;
-       top: 100%;
-       left: 0;
-       background: #D8BFD8;
-       padding: 5px;
-       min-width: 180px;
-       border-radius: 12px;
-       box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
-   }  
-
-   nav ul li ul li a {
-       padding: 10px 15px;
-       color: white;
-       background: transparent;
-       border-radius: 15px;
-   }
-
-   nav ul li ul li a:hover {
-       background: #B19CD9;
-       color: white;
-   }
-
-   nav ul li:hover > ul {
-       display: block;
-   }
-
-   /* ---- IMAGEN DEBAJO DEL MENÚ ---- */
-   .hero-image {
-      width: 100%;
-      height: calc(115vh - 70px);
-      object-fit: cover;
-      display: block;
-   }
-
-   /* ---- BOTÓN DE IMAGEN (DUDAS) ---- */
-   .icono-dudas {
-      width: 30px;
-      height: 30px;
-      border-radius: 50%;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      cursor: pointer;
-      display: block;
-      margin: 0 auto;
-   }
-
-   .icono-dudas:hover {
-      transform: scale(1.15);
-      box-shadow: 0px 4px 8px rgba(0,0,0,0.25);
-   }
-
-   .texto-dudas {
-      font-size: 10.5px;
-      color: white;
-      font-weight: 600;
-      margin-top: 1px;
-      display: block;
+      padding: 20px;
+      background: #f5f5f5;
+      color: #222;
+    }
+    header, footer {
       text-align: center;
-   }
-
-   /* ---- CONTENEDOR DEL ENLACE DUDAS ---- */
-   .dudas-link {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
+      padding: 10px;
+      background: #0b7285;
+      color: white;
+      border-radius: 8px;
+    }
+    main {
+      background: white;
+      padding: 15px;
+      border-radius: 10px;
+      max-width: 600px;
+      margin: 20px auto;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      text-align: justify;
+    }
+    img, iframe {
+      max-width: 100%;
+      border-radius: 8px;
+      display: block;
+      margin: auto;
+    }
+    .btn {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 10px 14px;
+      background: #0b7285;
+      color: white;
       text-decoration: none;
-      background: transparent;
-   }
- </style> 
+      border-radius: 6px;
+    }
+  </style>
 </head>
 <body>
-  <!-- Menu principal -->
-  <nav>
-    <img src="LOGOCECY.PNG" alt="Logo" class="logo">
-    <ul>
-      <li><p><a href="ciudadano2.html">CIUDADANO</a></p></li>
-      <li>  
-        <p><a href="#">TRÁMITES</a></p>
-        <ul>
-          <li><a href="tramites.html">Ciudadanos administrativos</a></li>
-          <li><a href="gestionartramite.php">Gestionar Trámite</a></li>
-          <li><a href="#">.......</a></li>
-        </ul>
-      </li>
-      <li><p><a href="SOLICITUD.html">SOLICITUD</a></p></li>
-      <li>  
-        <p><a href="#">PAGO</a></p>
-        <ul>
-          <li><a href="#">Servicios y derechos</a></li>
-          <li><a href="">.......</a></li>
-          <li><a href="#">.......</a></li>
-        </ul>
-      </li>
-      <li>  
-        <p><a href="#">DOCUMENTOS</a></p>
-        <ul>
-          <li><a href="GALERIA.html">Galería</a></li>
-          <li><a href="#">.......</a></li>
-          <li><a href="#">.......</a></li>
-        </ul>
-      </li>
-      <li>
-        <p><a href="MENU.php">VISITANTES</a></p>
-        <ul>
-          <li><a href="index2.php">Registros</a></li>
-          <li><a href="#">.......</a></li>
-          <li><a href="#">.......</a></li>
-        </ul>
-      </li>
+  <header>
+    <h1>Ciudadano - SECCIÓN 1</h1>
+  </header>
 
-      <!-- 🔹 Botón de DUDAS más pequeño y centrado -->
-      <li>
-        <a href="index3.php" class="dudas-link">
-          <img src="DUDA.png" alt="Dudas" class="icono-dudas">
-          <span class="texto-dudas">DUDAS</span>
-        </a>
-      </li>
-    </ul>
-  </nav>
+  <header>
+    <h1>Ciudadano - SECCIÓN 2</h1>
+  </header>
 
-  <!-- Imagen grande debajo del menú -->
-  <img src="IMGC.png" alt="Imagen grande" class="hero-image">
+  <main>
+    <h2>CIUDADANO...</h2>
+
+   <img src="cecyto.jpg" alt="Imagen del ciudadano">
+   <img src="equipo.jpg" alt="Imagen del ciudadano">
+    <p>
+      La participación ciudadana es uno de los pilares fundamentales de toda sociedad democrática. 
+      A través de ella, las personas pueden influir en las decisiones públicas, expresar sus opiniones 
+      y contribuir a la mejora de su comunidad. Participar no se limita al voto; también incluye el diálogo, 
+      la colaboración en proyectos sociales y la vigilancia de la gestión pública. 
+      Fomentar la participación desde la escuela y la familia fortalece la cultura cívica 
+      y promueve una sociedad más justa y responsable.
+    </p>
+
+    <h2>Video informativo</h2>
+
+    <!-- Video desde Google Drive -->
+    <iframe src="https://drive.google.com/file/d/1RZGn1exEzVRpIlT90DCpiEJrS5y4hzOb/preview"
+            width="640" height="360" allow="autoplay; encrypted-media"
+            title="Video desde Google Drive">
+    </iframe>
+
+    <h2>Descargar archivo</h2>
+
+    <!-- Enlace de descarga desde Google Drive -->
+    <a class="btn" href="https://drive.google.com/uc?export=download&id=1WyIAo-0fYs4TnJiTpT5A6GA7fwtTQOIT" target="_blank">
+      Descargar archivo
+    </a>
+  </main>
+  <header>
+    <h1>Ciudadano - SECCIÓN 2</h1>
+  </header>
+
+  <footer>
+    <p>© 2025 Ciudadano Ejemplar</p>
+  </footer>
 </body>
 </html>
+
