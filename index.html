@@ -2,7 +2,10 @@
 <html lang="es">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=390, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+  <!-- ✅ Meta corregido solo para que funcione en celular -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Página Ciudadano Básica</title>
 
  <style>
@@ -135,13 +138,85 @@
       text-decoration: none;
       background: transparent;
    }
+
+   /* ===================== */
+   /* SOLO PARA CELULAR */
+   /* ===================== */
+   @media (max-width: 768px) {
+
+     nav {
+       flex-direction: column;
+       height: auto;
+       padding-left: 0;
+       padding: 10px;
+       align-items: center;
+     }
+
+     nav img.logo {
+       position: static;
+       margin-bottom: 10px;
+     }
+
+     nav form {
+       width: 100%;
+       display: flex;
+       flex-direction: column;
+       gap: 5px;
+       margin-bottom: 10px;
+     }
+
+     nav form input {
+       width: 95%;
+     }
+
+     nav ul {
+       flex-direction: column;
+       width: 100%;
+       align-items: center;
+     }
+
+     nav ul li {
+       width: 100%;
+     }
+
+     nav ul li a {
+       width: 90%;
+       display: block;
+       text-align: center;
+       margin: 3px auto;
+     }
+
+     /* submenús */
+     nav ul li ul {
+       position: static;
+       width: 90%;
+     }
+
+     /* Imagen principal */
+     .hero-image {
+       height: auto;
+       width: 100%;
+     }
+
+     /* Botón dudas */
+     .icono-dudas {
+       width: 35px;
+       height: 35px;
+     }
+
+     .texto-dudas {
+       font-size: 12px;
+     }
+   }
  </style> 
 </head>
 
 <body>
+
   <!-- Menu principal -->
   <nav>
     <img src="LOGOCECY.png" alt="Logo" class="logo">
+
     <form method="get" action="https://www.google.com/search" target="_blank">
         <input type="search" name="q" placeholder="introducir busqueda" autofocus required>
         <input type="submit">
@@ -194,7 +269,7 @@
          <p><a href="https://share.google/Q5YCviwYntzpR3B4T">AYUNTAMIENTO 2025</a></p>
       </li>
 
-      <!-- 🔹 Botón de DUDAS más pequeño y centrado -->
+      <!-- Botón DUDAS -->
       <li>
         <a href="index3.php" class="dudas-link">
           <img src="DUDA.png" alt="Dudas" class="icono-dudas">
@@ -206,5 +281,6 @@
 
   <!-- Imagen grande debajo del menú -->
   <img src="IMGC.png" alt="Imagen grande" class="hero-image">
+
 </body>
 </html>
